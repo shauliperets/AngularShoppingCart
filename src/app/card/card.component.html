@@ -1,0 +1,29 @@
+<div
+  class="card"
+  (mouseenter)="onCardHoverOn()"
+  (mouseleave)="onCardHoverOff()"
+>
+  <img class="card__image" [src]="source" [alt]="alternate" />
+  <h1 class="card__title">{{ title }}</h1>
+
+  <input id="name" [(ngModel)]="title" placeholder="name" />
+  <div class="card__counter">
+    <!--i class="fa fa-plus fa-3x fa-inverse" aria-hidden="true"></i-->
+    <button class="card__button" (click)="onPlusClick()" *ngIf="isHover">
+      <img
+        class="card__icon"
+        src="../../assets/icons/plus.svg"
+        alt="plus icon"
+      />
+    </button>
+    <span class="card__count" *ngIf="isHover">{{ this.counter }}</span>
+    <button class="card__button" (click)="onMinusClick()" *ngIf="isHover">
+      <img
+        class="card__icon"
+        src="../../assets/icons/minus.svg"
+        alt="plus icon"
+      />
+    </button>
+    <!--i class="fa fa-minus fa-3x fa-inverse" aria-hidden="true"></i-->
+  </div>
+</div>

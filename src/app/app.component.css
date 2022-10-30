@@ -1,0 +1,13 @@
+@import "../assets/css/index.css";
+
+.navigation a {
+  padding: 10px;
+  border: 1px solid red;
+
+  background-color: darkseagreen;
+}
+
+/* temp */
+.border_selected {
+  border: 1px solid darkred;
+}

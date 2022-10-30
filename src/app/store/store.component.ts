@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-//import { Cards } from './card/cards-data';
-import { Card } from './card/card';
-import { DataService } from './data.service';
+import { Card } from '../card/card';
+import { DataService } from '../data.service';
 
 @Component({
-  selector: 'App',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'store',
+  templateUrl: './store.component.html',
+  styleUrls: ['./store.component.css'],
 })
-export class AppComponent implements OnInit {
+export class StoreComponent implements OnInit {
   title = 'Shopping Cart';
   cards: Card[] = [];
 

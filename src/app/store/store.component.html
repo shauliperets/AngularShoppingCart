@@ -1,0 +1,9 @@
+<div class="cards">
+  <div *ngFor="let card of cards">
+    <Card [id]="card.id" [title]="card.title" [image]="card.source"></Card>
+    <button (click)="onCardClick(card)">{{ card.title }}</button>
+    <div *ngIf="card.id > 0" [class.border_selected]="card.id === 1">
+      Id ({{ card.id }}) is currect
+    </div>
+  </div>
+</div>
